@@ -1,0 +1,20 @@
+extends ../layout.jade
+block contenido
+	h1(class="fjalla") Estàs eliminant
+	div(class="row")
+		div(class="col-md-4")
+		div(class="col-md-4")
+			p(class="arvo")
+				span(class="myblue") #{book.title} 
+				| de 
+				span(class="myblue") #{book.author} 
+				| de l'editorial 
+				span(class="myblue") #{book.editorial}
+			div(class="museum")
+				form(method="POST" action="/books/#{book.id}?_method=delete")
+					h2(class="fjalla") .si, estic d'acord
+					div(class="form-item")
+						label(for="confirm")
+						input(type="text" name="confirm" placeholder="Escriu aquí: Si vull" onkeyup="this.value=this.value.toUpperCase()")
+					div(class="button-panel")
+						input(type="submit" class="arvo button" value="Eliminar")

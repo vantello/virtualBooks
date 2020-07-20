@@ -1,0 +1,28 @@
+extends layout.jade
+block contenido
+	div(class="form-wrapper")
+		h1(class="fjalla") Iniciar sessió
+		div(class="museum")		
+			form(action="/login" method="POST")
+				h2(class="fjalla") .jo sóc
+				h2(class="fjalla red")
+					if(message)
+						#alert
+						p= message
+				div(class="form-item")
+					label(for='email')
+					input(type='email' name='email' required='required' placeholder='Email' autofocus)
+				div(class="form-item")
+					label(for="password")
+					input(type="password" name="password" required="required" placeholder="Password" class="arvo")
+				div(class="form-item d-flex justify-content-center")
+						a(href="auth/facebook")
+							img(src="./imgs/ifb32.png" class="air")
+						a(href="auth/twitter")
+							img(src="./imgs/itw32.png" action="" class="air")
+				div(class="button-panel")
+					input(type='submit' class="arvo button" title='Sign In' value='Iniciar sessió')
+		div(class="form-footer")
+			p
+				a(href="/register" class="arvo") No sóc usuari.
+				

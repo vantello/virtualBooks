@@ -1,0 +1,42 @@
+extends ../layout.jade
+block contenido
+  h1(class="fjalla") Benvingut, 
+    span(class="myblue") #{name}
+    | !
+  div(class="row")
+    div(class="col-sm-3")
+    div(class="col-sm-6")
+      div(class="row")
+        div(class="col-sm text-center")
+          a(href="/books/library" class="text-body arvo navi") Biblioteca
+        div(class="col-sm text-center")
+          a(href="/books/search" class="text-body arvo navi") Buscar un llibre
+        div(class="col-sm text-center")
+          a(href="/books/new" class="text-body arvo navi") Afegir LLibre
+        div(class="col-sm text-center")
+          a(href="/books" class="text-body arvo navi") Gestionar
+          
+  div(class="row")
+    div(class="col-sm-3")
+    div(class="col-sm-6")
+      div(class="museump")
+        div(class="d-flex justify-content-between")
+          h2(class="fjalla text-uppercase font-weight-bold") #{book.title}
+          h3(class="fjalla text-uppercase text-md-right") Editorial #{book.editorial}
+        div(class="d-flex justify-content-between")
+          h3(class="fjalla text-uppercase") #{book.author}
+          h4(class="fjalla text-uppercase") #{book.category} 
+        div(class="d-flex align-items-end flex-column")
+          p(class="fjalla") #{book.pages} pàgines
+        p(class="fjalla") #{book.read} l'he llegit!
+        if (book.comments)
+          div(class="museump")
+            p(class="fjalla") Comentaris
+            p(class="arvo") #{book.comments}
+        else
+          div(class="museump")
+            p(class="arvo") Encara no has introduït comentaris per a aquest llibre.
+        if(book.who != 'No deixat')
+          p(class="fjalla red") Deixat a #{book.who}
+        p(class="arvo") Donat d'alta #[i #{book.date}]
+        

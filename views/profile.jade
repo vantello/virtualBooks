@@ -1,0 +1,28 @@
+extends layout.jade
+block contenido
+  h1(class="fjalla") Benvingut, 
+    span(class="myblue") #{name}
+    | !
+  div(class="row")
+    div(class="col-sm-3")
+    div(class="col-sm-6")
+      div(class="row")
+        div(class="col-sm text-center")
+          a(href="/books/library" class="text-body arvo navi") Biblioteca
+        div(class="col-sm text-center")
+          a(href="/books/search" class="text-body arvo navi") Buscar un llibre
+        div(class="col-sm text-center")
+          a(href="/books/new" class="text-body arvo navi") Afegir LLibre
+        div(class="col-sm text-center")
+          a(href="/books" class="text-body arvo navi") Gestionar
+          
+  div(class="row")
+    div(class="col-sm-3")
+    div(class="col-sm-6")
+      div(class="museump")
+        h2(class="arvo text-uppercase font-weight-bold") Aquesta és la teva biblioteca
+        p(class="arvo") Actualment hi ha #{totalbooks} llibres.
+        p(class="arvo")
+        
+          
+  

@@ -1,0 +1,35 @@
+extends ../layout.jade
+block contenido
+    div(class="row")
+      div(class="col-sm-2")
+      div(class="col-sm-8")
+        h1(class="fjalla") ADMINISTRACIÓ DE LA BIBLIOTECA
+        a(href="/profile" class="arvo button") <- Tornar a la zona d'usuari
+        table(class="table mt-3")
+          thead(class="thead-dark")
+            tr
+              th Títol
+              th Autor
+              th Editorial
+              th Llegit
+              th Nº Pàgines
+              th Deixat
+              th Temàtica
+              th Accions
+          tbody
+            each book in books
+              tr
+                td(class="arvo")= book.title
+                td(class="arvo")= book.author
+                td(class="arvo")= book.editorial
+                td(class="arvo")= book.read
+                td(class="arvo")= book.pages
+                td(class="arvo")= book.who
+                td(class="arvo")= book.category
+                td 
+                  a(href="/books/edit/#{book.id}" class="text-body arvo") Editar
+                  =" - "
+                  a(href="/books/delete/#{book.id}" class="text-body arvo delete") Eliminar
+          if(message)
+            #alert
+            p(class="arvo")= message      

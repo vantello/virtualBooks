@@ -1,0 +1,53 @@
+extends ../layout.jade
+block contenido
+	h1(class="fjalla") 
+		span(class="text-info") #{name}
+		|, estàs editant el llibre 
+		span(class="text-info") #{book.title} 
+	div(class="row")
+		div(class="col-md-4")
+		div(class="col-md-4")
+			div(class="museum")
+				form(method="POST" action="/books/#{book.id}?_method=put" style="margin-top:1.5em;")
+					h2(class="fjalla") .editar llibre
+					h2(class="fjalla red")
+						if(message)
+						#alert
+						p= message
+					div(class="form-item")
+						label(for="nom")
+						input(type="text" name="title" value="#{book.title}" placeholder="Nom del llibre")
+					div(class="form-item")
+						label(for="autor")
+						input(type="text" name="author" value="#{book.author}" placeholder="Nom de l'autor")
+					div(class="form-item")
+						label(for="editorial")
+						input(type="text" name="editorial" value="#{book.editorial}" placeholder="Editorial")
+					div(class="form-item")
+						label(for="read")
+						input(type="text" name="read" value="#{book.read}" placeholder="L'he Llegit? Si/No" onkeyup="this.value=this.value.toUpperCase()")
+					div(class="form-item")
+						label(for="pages")
+						input(type="text" name="pages" value="#{book.pages}" placeholder="Nº de pàgines")
+					div(class="form-item")
+						label(for="category")
+						input(type="text" name="category" value="#{book.category}" placeholder="Temàtica")
+					div(class="row")
+						div(class="col-sm-6")
+							div(class="form-item")
+								label(for="deixat")
+								input(type="text" name="deixat" value="#{book.deixat}" placeholder="L'he deixat? Si/No" onkeyup="this.value=this.value.toUpperCase()")
+						div(class="col-sm-6")
+							div(class="form-item")
+								label(for="who")
+								input(type="textbox" name="who" value="#{book.who}" placeholder="A qui?" class="capitalize" )
+					div(class="form-item")
+						label(for="comments")
+						input(type="text" name="comments" value="#{book.comments}" placeholder="Comentari")
+					div(class="form-item")
+						label(for="confirm")
+						input(type="text" name="confirm" placeholder="Escriu aquí: Si vull" onkeyup="this.value=this.value.toUpperCase()")
+					div(class="button-panel")
+						input(type="submit" class="arvo button" value="Actualitzar")
+
+		

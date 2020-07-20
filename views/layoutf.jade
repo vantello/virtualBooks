@@ -1,0 +1,26 @@
+doctype html 
+html(lang="en")
+	head
+		title Virtual Books
+		meta(charset="UTF-8")
+		link(href="/css/main.css" rel="stylesheet")
+		link(href="/css/animate.css" rel="stylesheet" type="text/css")
+		link(href="/css/forms.css" rel="stylesheet" type="text/css")
+		link(href="/css/open-iconic-bootstrap.css" rel="stylesheet")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css")
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js")
+		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js")
+		script(src="js/sorttable.js")
+		script(src="js/main.js")
+
+		link(href="https://fonts.googleapis.com/css?family=Arvo|Fjalla+One" rel="stylesheet")
+		
+	body
+		nav(class="navbar navbar-expand-sm navbar-custom")
+			button(class="navbar-toggler" type="button" data-toogle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation")
+				span(class="navbar-toggler-icon")
+			a(class="navbar-brand" href="/profile") VIRTUAL BOOKS
+		block contenido
+		
+		include footer

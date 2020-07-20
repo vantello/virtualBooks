@@ -1,0 +1,60 @@
+extends ../layout.jade
+block contenido
+    div(class="row")
+      div(class="col-sm-2")
+      div(class="col-sm-8")
+        h1(class="fjalla") BIBLIOTECA DE 
+          span(class="myblue") #{name}
+        a(href="/profile" class="arvo button") <- Tornar a la zona d'usuari
+        div(class="button-panel")
+          div(class="museum")
+            h3(class="fjalla") .ordenar per
+            div(class="row")
+              div(class="col-sm-2")
+                form(method="get" action="/sbytitle")
+                  input(type="submit" class="arvo button" value="Títol")  
+              div(class="col-sm-2")
+                form(method="get" action="/sbyauthor")
+                  input(type="submit" class="arvo button" value="Autor")
+              div(class="col-sm-2")
+                form(method="get" action="/sbyeditorial")
+                  input(type="submit" class="arvo button" value="Editorial")
+              div(class="col-sm-2")
+                form(method="get" action="/sbyread")
+                  input(type="submit" class="arvo button" value="Llegits")
+              div(class="col-sm-2")
+                form(method="get" action="/sbypages")
+                  input(type="submit" class="arvo button" value="Pàgines")
+              div(class="col-sm-2")
+                form(method="get" action="/sbycategory")
+                  input(type="submit" class="arvo button" value="Temàtica")
+              div(class="col-sm-2")
+                form(method="get" action="/sbydeixats")
+                  input(type="submit" class="arvo button" value="Deixats")
+        table(class="table")
+          thead(class="thead-dark")
+            tr
+              th Fitxa
+              th Títol
+              th Autor
+              th Editorial
+              th Llegit
+              th Nº Pàgines
+              th Deixat
+              th Temàtica
+          tbody
+            each book in books
+              tr
+                td
+                  a(href="/books/fitxa/#{book.id}" class="text-body arvo")
+                    img(src="../imgs/fitxa.png")
+                td(class="arvo")= book.title
+                td(class="arvo")= book.author
+                td(class="arvo")= book.editorial
+                td(class="arvo")= book.read
+                td(class="arvo")= book.pages
+                td(class="arvo")= book.who
+                td(class="arvo")= book.category 
+          if(message)
+            #alert
+            p(class="arvo")= message      

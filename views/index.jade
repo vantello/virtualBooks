@@ -1,0 +1,45 @@
+doctype html 
+html(lang="en")
+	head
+		title Virtual Books
+		meta(charset="UTF-8")
+		link(href="/css/main.css" rel="stylesheet")
+		link(href="/css/animate.css" rel="stylesheet" type="text/css")
+		link(href="/css/forms.css" rel="stylesheet" type="text/css")
+		
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css")
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js")
+		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js")
+		script(src="js/main.js")
+
+		link(href="https://fonts.googleapis.com/css?family=Arvo|Fjalla+One" rel="stylesheet")
+		
+	body(class="layout")
+		div(class="row top")
+			div(class="col-sm-4")
+			div(class="col-sm-4")
+				h1(class="fjalla white") Virtual Books
+					div(class="row bot")
+						a(href="/register" class="navi white col-sm text-center arvo") Register
+						p(class="white col-sm text-center arvo") |||
+						a(href="/login" class="navi white col-sm text-center arvo") Login
+						
+		footer(class="page-footer font-small mt-5")
+			div(class="container")
+				hr(class="rgba-white-light (style='margin: 0 15%;')")
+				div(class="row text-center d-flex justify-content-center mb-3")
+					div(class="col-md-2")
+						h5(class="text-uppercase font-weight-bold")
+							a(class="text-dark arvo" href='/footer/privacy') Política de privacitat
+					div(class="col-md-2")
+						h5(class="text-uppercase font-weight-bold")
+							a(class="text-dark arvo" href='/footer/about') Sobre Virtual Books
+					div(class="col-md-2")
+						h5(class="text-uppercase font-weight-bold")
+							a(class="text-dark arvo" href='/footer/help') Ajuda
+							
+				hr(class="clearfix d-md-none rgba-white-light(style='margin: 10% 15% 5%;')")
+			div(class="footer-copyright text-center py-3")
+				| © 2018 Copyright:
+				a(href="http://aleixtello.com/")  Virtual Books

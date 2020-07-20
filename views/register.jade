@@ -1,0 +1,38 @@
+extends layout.jade
+block contenido
+	div(class="form-wrapper")
+		h1(class="fjalla") REGISTRE
+		div(class="museum")
+			form(action="/register" method="POST")
+				h2(class="fjalla") .nou usuari
+				h2(class="fjalla red")
+					if(message)
+						#alert
+						p= message
+				div(class="form-item")
+					label(for='name')
+					input(type='text' name='name' required='required' placeholder='Nom' id="name" class="capitalize" autofocus)
+				div(class="form-item")
+					label(for='lastname')
+					input(type='text' name='lastname' placeholder='Cognom' id="lastname" class="capitalize")
+				div(class="form-item")
+					label(for='username')
+					input(type='text' name='username' placeholder='Nom Usuari' id="username")
+				div(class="form-item")
+					label(for='email')
+					input(type='email' name='email' required='required' placeholder='Email')
+				div(class="form-item")
+					label(for="password")
+					input(type="password" name="password" required="required" placeholder="Contrasenya" class="arvo")
+				div(class="form-item d-flex justify-content-center")
+						a(href="auth/facebook")
+							img(src="./imgs/ifb32.png" class="air")
+						a(href="auth/twitter")
+							img(src="./imgs/itw32.png" action="" class="air")
+				div(class="button-panel")
+						input(type='submit' class="arvo2 button" title='SignIn' value='Registrar')
+		
+		div(class="form-footer")
+			p
+				a(href="/login" class="arvo") Ja sóc usuari.
+			

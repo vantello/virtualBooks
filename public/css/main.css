@@ -1,0 +1,92 @@
+
+.layout{
+  background-image: url(/imgs/bookslayout.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color:#464646;
+}
+
+// PLACEHOLDERS
+
+input::placeholder{
+  color: red;
+};
+:-ms-input-placeholder, ::-webkit-input-placeholder, ::-moz-input-placeholder{
+  color: blue;
+};
+
+
+// BARRA DE NAVEGACIÓ CUSTOM
+
+.navbar-custom{
+	background-color: white;
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: black;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: black;
+}
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: black;
+    text-decoration-line: underline overline;
+}
+
+.white{
+	color: white;
+}
+
+.text-center{
+	text-align: center;
+	padding-top: 10px;
+}
+.top{
+	margin-top: 220px;
+}
+.bot{
+	margin-bottom: 15px;
+}
+.fjalla{
+ 	font-family: 'Fjalla One', sans-serif;
+ 	text-transform: uppercase;
+}
+.arvo{
+	font-family: 'Arvo', serif;
+	font-size: 16px;
+}
+.navi:hover{
+	color: black;
+  text-decoration-line: underline overline;
+  text-transform: uppercase;
+}
+
+.air{
+  margin: 5px;
+}
+.museum{
+  border: 4px solid black;
+  padding: 2.5em;
+  margin-bottom: 2em;
+}
+
+.museump{
+  border: 4px solid black;
+  padding: 2.5em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.capitalize{
+  text-transform: capitalize;
+}
+
+.red{
+  color: red;
+}
+.myblue{
+  color: rgb(85,171,255);
+}
